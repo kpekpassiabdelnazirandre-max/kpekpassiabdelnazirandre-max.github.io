@@ -3,13 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DM TradeMaster Pro — logiciel d’analyse de trading pour Windows</title>
-  <meta name="description" content="DM TradeMaster Pro : logiciel de trading pour Windows en développement, graphiques professionnels, outils de dessin, analyse Smart Money Concepts, gestion du risque. Aucun ordre sans confirmation. Android prévu.">
+  <!-- Sécurité : aucun script, style, image ou police venant d’un autre site ; aucun envoi de
+       formulaire ; aucune connexion sortante (le site ne collecte rien). -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>DM TradeMaster Pro — le logiciel de trading de la communauté DM</title>
+  <meta name="description" content="DM TradeMaster Pro, logiciel d’analyse de trading pour Windows conçu pour la communauté DM : graphiques professionnels, outils de dessin, données de marché en direct, analyse Smart Money Concepts et gestion du risque. Aucun ordre sans votre confirmation.">
   <meta name="theme-color" content="#00050d">
   <meta name="color-scheme" content="dark">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="DM TradeMaster Pro">
-  <meta property="og:description" content="Logiciel d’analyse de trading pour Windows, en développement. Graphiques professionnels, outils SMC, sécurité. Android prévu.">
+  <meta property="og:title" content="DM TradeMaster Pro — conçu pour la communauté DM">
+  <meta property="og:description" content="Logiciel d’analyse de trading pour Windows, conçu pour répondre aux besoins de la communauté DM. Graphiques professionnels, analyse SMC, sécurité. Android ensuite.">
   <link rel="canonical" href="https://kpekpassiabdelnazirandre-max.github.io/">
   <meta property="og:url" content="https://kpekpassiabdelnazirandre-max.github.io/">
   <meta property="og:image" content="https://kpekpassiabdelnazirandre-max.github.io/assets/img/og-image.png">
@@ -25,7 +29,7 @@
   <link rel="preload" href="assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DM TradeMaster Pro","url":"https://kpekpassiabdelnazirandre-max.github.io/","applicationCategory":"FinanceApplication","operatingSystem":"Windows","softwareVersion":"0.1 (en développement)","author":{"@type":"Person","name":"Abdel Nazir André KPEKPASSI","address":{"@type":"PostalAddress","addressCountry":"BJ"}}}
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"DM TradeMaster Pro","url":"https://kpekpassiabdelnazirandre-max.github.io/","applicationCategory":"FinanceApplication","operatingSystem":"Windows","softwareVersion":"0.1","description":"Logiciel d’analyse de trading conçu pour la communauté DM.","author":{"@type":"Person","name":"Abdel Nazir André KPEKPASSI","address":{"@type":"PostalAddress","addressCountry":"BJ"}}}
   </script>
 </head>
 <body data-title-key="title.home">
@@ -48,6 +52,9 @@
       <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2.5 20h19z"/><path d="M12 10v4.5M12 17.5h.01"/></symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
       <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+      <symbol id="i-people" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2"/><circle cx="17" cy="9" r="2.4" opacity=".65"/><path d="M16.5 14c2.3.3 3.9 1.9 4.5 4.6" opacity=".65"/></symbol>
+      <symbol id="i-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4"/><path d="M14 4h6v6"/><path d="M4 12v8h8" opacity=".6"/></symbol>
+      <symbol id="i-loop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11a8 8 0 0 0-14.3-4.9L4 8"/><path d="M4 3v5h5"/><path d="M4 13a8 8 0 0 0 14.3 4.9L20 16"/><path d="M20 21v-5h-5"/></symbol>
     </defs>
   </svg>
 
@@ -59,8 +66,9 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Menu" data-i18n-attr="aria-label:nav.menu"><svg width="22" height="22"><use href="#i-menu"/></svg></button>
       <ul class="nav-links" id="menu">
+        <li><a href="#communaute" data-i18n="nav.community">Communauté</a></li>
         <li><a href="#fonctionnalites" data-i18n="nav.features">Fonctionnalités</a></li>
-        <li><a href="#captures" data-i18n="nav.shots">Captures</a></li>
+        <li><a href="#captures" data-i18n="nav.shots">Aperçu</a></li>
         <li><a href="#feuille-de-route" data-i18n="nav.roadmap">Feuille de route</a></li>
         <li><a href="#securite" data-i18n="nav.security">Sécurité</a></li>
         <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
@@ -76,15 +84,15 @@
     <section class="hero">
       <div class="container hero-grid">
         <div>
-          <p class="status-chip"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">En développement · version 0.1 · pas encore distribué</span></p>
+          <p class="status-chip"><span class="dot" aria-hidden="true"></span><span data-i18n="hero.status">Version 0.1 en développement · conçue pour la communauté DM</span></p>
           <h1><span style="white-space:nowrap">DM TradeMaster</span> <span class="accent">Pro</span></h1>
           <p class="tagline" data-i18n="hero.tagline">Analyser avec précision. Décider avec méthode.</p>
-          <p class="lead" data-i18n="hero.lead">Un logiciel de trading pour Windows, conçu autour de l’analyse Smart Money Concepts  graphiques professionnels, outils de dessin, gestion du risque et sécurité au premier plan. Android suivra.</p>
+          <p class="lead" data-i18n="hero.lead">Le logiciel de trading conçu pour répondre aux besoins de la communauté DM&nbsp;: graphiques professionnels, données de marché en direct, analyse Smart Money Concepts et gestion du risque, avec la sécurité au premier plan. Sur Windows d’abord, puis sur Android.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#fonctionnalites"><span data-i18n="hero.discover">Découvrir</span><svg><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-primary" href="#communaute"><span data-i18n="hero.discover">Découvrir le projet</span><svg><use href="#i-arrow"/></svg></a>
             <a class="btn btn-ghost" href="#feuille-de-route" data-i18n="hero.roadmap">Feuille de route</a>
           </div>
-          <p class="risk-banner" role="note"><svg><use href="#i-alert"/></svg><span data-i18n="hero.risk">Le trading comporte un risque élevé de perte en capital. DM TradeMaster Pro est un outil d’analyse  il ne promet aucun gain et ne passera jamais d’ordre sans votre confirmation.</span></p>
+          <p class="risk-banner" role="note"><svg><use href="#i-alert"/></svg><span data-i18n="hero.risk">Le trading comporte un risque élevé de perte en capital. DM TradeMaster Pro est un outil d’analyse&nbsp;: il ne promet aucun gain et ne passe jamais d’ordre sans votre confirmation.</span></p>
         </div>
         <div>
           <div class="hero-visual">
@@ -92,7 +100,22 @@
             <canvas id="hero-chart" role="img" aria-label="Illustration animée : bougies fictives et repères Smart Money Concepts (cassure de structure, zone d’ordres, liquidité)" data-i18n-attr="aria-label:hero.canvas"></canvas>
             <img class="watermark" src="assets/img/dm-logo-80.png" width="48" height="48" alt="">
           </div>
-          <p class="hero-caption" data-i18n="hero.caption">Animation décorative dessinée par ce site  bougies et repères SMC fictifs.</p>
+          <p class="hero-caption" data-i18n="hero.caption">Animation décorative&nbsp;: bougies et repères SMC fictifs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="communaute">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow" data-i18n="com.eyebrow">La communauté DM</span>
+          <h2 data-i18n="com.title">Un logiciel né des besoins de la communauté DM</h2>
+          <p data-i18n="com.text">DM TradeMaster Pro est développé pour la communauté DM, à partir des besoins concrets de ses traders&nbsp;: un outil fiable, clair et sûr pour analyser les marchés avec méthode. Sa première version sera soumise à la validation de la communauté, puis le logiciel évoluera avec elle.</p>
+        </div>
+        <div class="features three">
+          <article class="card reveal"><div class="icon"><svg><use href="#i-target"/></svg></div><h3 data-i18n="c1.t">Pensé pour vos besoins</h3><p data-i18n="c1.p">Chaque fonctionnalité répond à un usage réel des traders de la communauté&nbsp;: lecture du marché, analyse SMC, préparation des positions et maîtrise du risque.</p></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-people"/></svg></div><h3 data-i18n="c2.t">Validé par la communauté</h3><p data-i18n="c2.p">La première version sera présentée aux membres de la communauté DM, qui pourront l’éprouver dans leurs conditions réelles avant sa diffusion.</p></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-loop"/></svg></div><h3 data-i18n="c3.t">Amélioré ensemble</h3><p data-i18n="c3.p">Après la validation, les retours de la communauté orienteront les priorités&nbsp;: corrections, améliorations et nouvelles fonctionnalités, version après version.</p></article>
         </div>
       </div>
     </section>
@@ -101,18 +124,19 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="feat.eyebrow">Fonctionnalités</span>
-          <h2 data-i18n="feat.title">Tout ce qu’il faut pour analyser, au même endroit</h2>
-          <p data-i18n="feat.text">Chaque fonctionnalité indique son état réel  ce qui existe déjà dans le logiciel, ce qui est en cours et ce qui est prévu.</p>
+          <h2 data-i18n="feat.title">L’essentiel de l’analyse, réuni dans un seul outil</h2>
+          <p data-i18n="feat.text">Chaque fonctionnalité affiche son état réel&nbsp;: disponible dans la version en développement, en cours de réalisation ou prévue.</p>
         </div>
         <div class="features">
-          <article class="card reveal"><div class="icon"><svg><use href="#i-chart"/></svg></div><h3 data-i18n="f1.t">Graphiques professionnels</h3><p data-i18n="f1.p">5 types (bougies, barres, ligne, aire, Heikin Ashi), 8 unités de temps de M1 à W1, 7 indicateurs réglables (SMA, EMA, Bollinger, RSI, MACD, ATR, stochastique), comparaison de symboles et capture du graphique.</p><span class="badge done" data-i18n="b.p3">Fait · phase 3</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-draw"/></svg></div><h3 data-i18n="f2.t">Outils de dessin</h3><p data-i18n="f2.p">Ligne de tendance, lignes horizontale et verticale, rectangle, position longue ou courte. Couleurs libres, styles, textes, unités affichées au choix  vos dessins sont enregistrés.</p><span class="badge done" data-i18n="b.p3">Fait · phase 3</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-live"/></svg></div><h3 data-i18n="f3.t">Données de marché en direct</h3><p data-i18n="f3.p">Prix en direct et historique depuis des sources officielles, en lecture seule  forex, métaux, indices, indices synthétiques et cryptomonnaies, avec la latence mesurée.</p><span class="badge progress" data-i18n="b.p4">En cours · phase 4</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-smc"/></svg></div><h3 data-i18n="f4.t">Analyse DM SMC</h3><p data-i18n="f4.p">Le panneau DM SMC réunira biais, structure, inducement, zones d’ordres et configurations, calculés par un moteur propre à DM.</p><span class="badge planned" data-i18n="b.p7">Prévu · phase 7</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-risk"/></svg></div><h3 data-i18n="f5.t">Gestion du risque</h3><p data-i18n="f5.p">Taille de position calculée selon le risque choisi, stop loss, take profit et rapport risque / rendement, à partir des données réelles du compte.</p><span class="badge planned" data-i18n="b.p8">Prévu · phase 8</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-sync"/></svg></div><h3 data-i18n="f6.t">Synchronisation PC ↔ Android</h3><p data-i18n="f6.p">Vos analyses et vos dessins vous suivent entre Windows et Android.</p><span class="badge planned" data-i18n="b.p6b">Prévu · phases 6B et 11</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-code"/></svg></div><h3 data-i18n="f7.t">Éditeur d’indicateurs Python</h3><p data-i18n="f7.p">Écrivez vos propres indicateurs en Python, directement dans le logiciel.</p><span class="badge planned" data-i18n="b.p12">Prévu · phase 12</span></article>
-          <article class="card reveal"><div class="icon"><svg><use href="#i-shield"/></svg></div><h3 data-i18n="f8.t">Sécurité</h3><p data-i18n="f8.p">Identifiants rangés dans le coffre Windows, connexion aux courtiers par leurs pages officielles, serveur local protégé, et aucun ordre sans votre confirmation explicite.</p><span class="badge progress" data-i18n="b.p45">En cours · phases 4 et 5</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-chart"/></svg></div><h3 data-i18n="f1.t">Graphiques professionnels</h3><p data-i18n="f1.p">Cinq types de graphiques (bougies, barres, ligne, aire, Heikin Ashi), huit unités de temps de M1 à W1, sept indicateurs paramétrables (SMA, EMA, Bollinger, RSI, MACD, ATR, stochastique), comparaison de symboles et capture du graphique.</p><span class="badge done" data-i18n="b.done">Disponible</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-draw"/></svg></div><h3 data-i18n="f2.t">Outils de dessin</h3><p data-i18n="f2.p">Lignes de tendance, horizontales et verticales, rectangles, positions longues et courtes. Couleurs, styles, textes et visibilité par unité de temps entièrement personnalisables&nbsp;; vos dessins sont enregistrés.</p><span class="badge done" data-i18n="b.done">Disponible</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-live"/></svg></div><h3 data-i18n="f3.t">Données de marché en direct</h3><p data-i18n="f3.p">Prix en direct et historique issus de sources officielles, en lecture seule&nbsp;: forex, métaux, indices, indices synthétiques et cryptomonnaies, avec la latence mesurée et affichée.</p><span class="badge done" data-i18n="b.done">Disponible</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-shield"/></svg></div><h3 data-i18n="f8.t">Sécurité des accès</h3><p data-i18n="f8.p">Identifiants protégés par le coffre-fort de Windows, connexion aux courtiers par leurs pages officielles, moteur local protégé et aucun ordre sans votre confirmation explicite.</p><span class="badge done" data-i18n="b.done">Disponible</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-windows"/></svg></div><h3 data-i18n="f9.t">Application de bureau</h3><p data-i18n="f9.p">Une fenêtre Windows dédiée, aux couleurs de DM&nbsp;: démarrage rapide, disposition réglable et mémorisée, arrêt maîtrisé.</p><span class="badge progress" data-i18n="b.progress">En cours</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-smc"/></svg></div><h3 data-i18n="f4.t">Analyse DM SMC</h3><p data-i18n="f4.p">Le panneau DM SMC réunira biais, structure, inducement, zones d’ordres et configurations, calculés par un moteur d’analyse propre à DM.</p><span class="badge planned" data-i18n="b.planned">Prévu</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-risk"/></svg></div><h3 data-i18n="f5.t">Gestion du risque</h3><p data-i18n="f5.p">Taille de position calculée selon le risque choisi, stop loss, take profit et rapport risque / rendement, à partir des données réelles de votre compte.</p><span class="badge planned" data-i18n="b.planned">Prévu</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-sync"/></svg></div><h3 data-i18n="f6.t">Compte DM et synchronisation</h3><p data-i18n="f6.p">Un compte DM unique pour retrouver vos analyses et vos dessins sur tous vos appareils, Windows et Android.</p><span class="badge planned" data-i18n="b.planned">Prévu</span></article>
+          <article class="card reveal"><div class="icon"><svg><use href="#i-code"/></svg></div><h3 data-i18n="f7.t">Éditeur d’indicateurs</h3><p data-i18n="f7.p">Créez vos propres indicateurs en Python, directement dans le logiciel, exécutés dans un environnement isolé.</p><span class="badge planned" data-i18n="b.planned">Prévu</span></article>
         </div>
       </div>
     </section>
@@ -120,9 +144,9 @@
     <section id="captures">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow" data-i18n="shots.eyebrow">Captures</span>
-          <h2 data-i18n="shots.title">Le vrai logiciel, tel qu’il est aujourd’hui</h2>
-          <p data-i18n="shots.text">Captures réelles de la version en développement, prises avec les données de démonstration  la mention DÉMO y reste visible.</p>
+          <span class="eyebrow" data-i18n="shots.eyebrow">Aperçu</span>
+          <h2 data-i18n="shots.title">Le logiciel, tel qu’il est aujourd’hui</h2>
+          <p data-i18n="shots.text">Captures réelles de la version en développement, réalisées avec des données de démonstration&nbsp;: la mention DÉMO reste visible.</p>
         </div>
         <div class="gallery">
           <figure class="window shot-main reveal">
@@ -135,12 +159,12 @@
           </figure>
           <div class="shots">
             <figure class="window shot reveal"><a href="assets/img/indicateurs-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/indicateurs-800.webp"><img src="assets/img/indicateurs-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Graphique avec les indicateurs RSI et MACD" data-i18n-attr="alt:shot2.alt"></picture></a><figcaption data-i18n="shot2.cap">Indicateurs RSI et MACD sous le graphique.</figcaption></figure>
-            <figure class="window shot reveal"><a href="assets/img/position-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/position-800.webp"><img src="assets/img/position-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Outil Position longue sur le graphique" data-i18n-attr="alt:shot3.alt"></picture></a><figcaption data-i18n="shot3.cap">Outil Position  objectif, stop et rapport risque / rendement.</figcaption></figure>
-            <figure class="window shot reveal"><a href="assets/img/reglages-dessin-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/reglages-dessin-800.webp"><img src="assets/img/reglages-dessin-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Fenêtre de réglages d’un dessin" data-i18n-attr="alt:shot5.alt"></picture></a><figcaption data-i18n="shot5.cap">Réglages d’un dessin  trait, couleurs, texte.</figcaption></figure>
+            <figure class="window shot reveal"><a href="assets/img/position-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/position-800.webp"><img src="assets/img/position-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Outil Position longue sur le graphique" data-i18n-attr="alt:shot3.alt"></picture></a><figcaption data-i18n="shot3.cap">Outil Position&nbsp;: objectif, stop et rapport risque / rendement.</figcaption></figure>
+            <figure class="window shot reveal"><a href="assets/img/reglages-dessin-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/reglages-dessin-800.webp"><img src="assets/img/reglages-dessin-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Fenêtre de réglages d’un dessin" data-i18n-attr="alt:shot5.alt"></picture></a><figcaption data-i18n="shot5.cap">Réglages d’un dessin&nbsp;: trait, couleurs, texte.</figcaption></figure>
             <figure class="window shot reveal"><a href="assets/img/comparaison-1600.webp" target="_blank" rel="noopener"><picture><source media="(max-width: 700px)" srcset="assets/img/comparaison-800.webp"><img src="assets/img/comparaison-1600.webp" width="1600" height="900" loading="lazy" decoding="async" alt="Comparaison de deux symboles en pourcentage" data-i18n-attr="alt:shot6.alt"></picture></a><figcaption data-i18n="shot6.cap">Comparaison de deux symboles, en pourcentage.</figcaption></figure>
           </div>
         </div>
-        <p class="note" data-i18n="shots.note">L’interface peut encore évoluer d’ici la première version distribuée.</p>
+        <p class="note" data-i18n="shots.note">L’interface peut encore évoluer d’ici la première version, notamment à la suite des retours de la communauté DM.</p>
       </div>
     </section>
 
@@ -148,21 +172,21 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="road.eyebrow">Feuille de route</span>
-          <h2 data-i18n="road.title">Treize phases, une à une</h2>
-          <p data-i18n="road.text">Chaque phase est terminée seulement quand elle est prouvée par des tests et des captures réelles.</p>
+          <h2 data-i18n="road.title">Une progression maîtrisée, étape par étape</h2>
+          <p data-i18n="road.text">Une étape n’est déclarée terminée qu’après vérification par des tests automatisés et des essais en conditions réelles.</p>
         </div>
         <ol class="timeline">
-          <li class="done reveal"><span class="node">1</span><div class="row"><div><h3 data-i18n="r1.t">Fondations</h3><p data-i18n="r1.p">Serveur local, API protégée, données de démonstration.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
-          <li class="done reveal"><span class="node">2</span><div class="row"><div><h3 data-i18n="r2.t">Interface DM Original</h3><p data-i18n="r2.p">Disposition et identité visuelle de la maquette.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
+          <li class="done reveal"><span class="node">1</span><div class="row"><div><h3 data-i18n="r1.t">Fondations</h3><p data-i18n="r1.p">Moteur local, interface de programmation protégée, données de démonstration.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
+          <li class="done reveal"><span class="node">2</span><div class="row"><div><h3 data-i18n="r2.t">Interface DM Original</h3><p data-i18n="r2.p">Disposition et identité visuelle propres à DM.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
           <li class="done reveal"><span class="node">3</span><div class="row"><div><h3 data-i18n="r3.t">Graphique professionnel</h3><p data-i18n="r3.p">Types de graphiques, indicateurs, dessins enregistrés, captures.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
-          <li class="progress reveal"><span class="node">4</span><div class="row"><div><h3 data-i18n="r4.t">Données de marché réelles</h3><p data-i18n="r4.p">Prix en direct et historique, lecture seule, aucun ordre.</p></div><span class="badge progress" data-i18n="s.progress">En cours</span></div></li>
-          <li class="reveal"><span class="node">5</span><div class="row"><div><h3 data-i18n="r5.t">Sécurité des identifiants</h3><p data-i18n="r5.p">Coffre Windows pour tous les identifiants.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
-          <li class="reveal"><span class="node">6</span><div class="row"><div><h3 data-i18n="r6.t">Application de bureau Windows</h3><p data-i18n="r6.p">Le logiciel dans sa propre fenêtre.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
-          <li class="reveal"><span class="node">6B</span><div class="row"><div><h3 data-i18n="r6b.t">Synchronisation</h3><p data-i18n="r6b.p">Analyses et dessins synchronisés entre vos appareils.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
+          <li class="done reveal"><span class="node">4</span><div class="row"><div><h3 data-i18n="r4.t">Données de marché réelles</h3><p data-i18n="r4.p">Prix en direct et historique, en lecture seule.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
+          <li class="done reveal"><span class="node">5</span><div class="row"><div><h3 data-i18n="r5.t">Sécurité des identifiants</h3><p data-i18n="r5.p">Protection des identifiants par le coffre-fort de Windows, journaux masqués.</p></div><span class="badge done" data-i18n="s.done">Terminé</span></div></li>
+          <li class="progress reveal"><span class="node">6</span><div class="row"><div><h3 data-i18n="r6.t">Application de bureau Windows</h3><p data-i18n="r6.p">Fenêtre dédiée, démarrage et arrêt maîtrisés, performances mesurées.</p></div><span class="badge progress" data-i18n="s.progress">En cours</span></div></li>
+          <li class="reveal"><span class="node">6B</span><div class="row"><div><h3 data-i18n="r6b.t">Compte DM et synchronisation</h3><p data-i18n="r6b.p">Compte unique, analyses et dessins synchronisés entre vos appareils.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
           <li class="reveal"><span class="node">7</span><div class="row"><div><h3 data-i18n="r7.t">Indicateur DM SMC</h3><p data-i18n="r7.p">Le moteur d’analyse Smart Money Concepts de DM.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
           <li class="reveal"><span class="node">8</span><div class="row"><div><h3 data-i18n="r8.t">Comptes et gestion du risque</h3><p data-i18n="r8.p">Lecture de vos comptes, calcul de la taille de position.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
-          <li class="reveal"><span class="node">9</span><div class="row"><div><h3 data-i18n="r9.t">Ordres et backtest</h3><p data-i18n="r9.p">Ordres toujours confirmés par vous, test de stratégies sur l’historique.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
-          <li class="reveal"><span class="node">10</span><div class="row"><div><h3 data-i18n="r10.t">Distribution Windows</h3><p data-i18n="r10.p">Installateur pour Windows.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
+          <li class="reveal"><span class="node">9</span><div class="row"><div><h3 data-i18n="r9.t">Ordres et backtest</h3><p data-i18n="r9.p">Ordres toujours confirmés par vous, test de stratégies sur l’historique, calendrier économique DM.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
+          <li class="reveal"><span class="node">10</span><div class="row"><div><h3 data-i18n="r10.t">Première version Windows</h3><p data-i18n="r10.p">Installateur Windows et validation par la communauté DM.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
           <li class="reveal"><span class="node">11</span><div class="row"><div><h3 data-i18n="r11.t">Application Android</h3><p data-i18n="r11.p">Synchronisée avec la version Windows.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
           <li class="reveal"><span class="node">12</span><div class="row"><div><h3 data-i18n="r12.t">Éditeur d’indicateurs</h3><p data-i18n="r12.p">Vos indicateurs personnels, écrits en Python.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
           <li class="reveal"><span class="node">13</span><div class="row"><div><h3 data-i18n="r13.t">Moteur graphique DM</h3><p data-i18n="r13.p">Un moteur de graphiques entièrement conçu par DM.</p></div><span class="badge planned" data-i18n="s.planned">Prévu</span></div></li>
@@ -177,8 +201,8 @@
           <h2 data-i18n="plat.title">Windows d’abord, Android ensuite</h2>
         </div>
         <div class="two">
-          <article class="card platform reveal"><div class="icon"><svg><use href="#i-windows"/></svg></div><div><h3>Windows</h3><p data-i18n="plat.win">Application de bureau pour Windows 10 et 11. En développement  aucune version n’est encore distribuée.</p><span class="badge progress" data-i18n="plat.winb">En développement</span></div></article>
-          <article class="card platform reveal"><div class="icon"><svg><use href="#i-phone"/></svg></div><div><h3>Android</h3><p data-i18n="plat.and">Application mobile synchronisée avec la version Windows, après celle-ci.</p><span class="badge planned" data-i18n="plat.andb">Bientôt</span></div></article>
+          <article class="card platform reveal"><div class="icon"><svg><use href="#i-windows"/></svg></div><div><h3>Windows</h3><p data-i18n="plat.win">Application de bureau pour Windows 10 et 11, en cours de développement. Aucune version n’est encore diffusée.</p><span class="badge progress" data-i18n="plat.winb">En développement</span></div></article>
+          <article class="card platform reveal"><div class="icon"><svg><use href="#i-phone"/></svg></div><div><h3>Android</h3><p data-i18n="plat.and">Application mobile synchronisée avec la version Windows, développée après celle-ci.</p><span class="badge planned" data-i18n="plat.andb">Prévu</span></div></article>
         </div>
       </div>
     </section>
@@ -187,16 +211,20 @@
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow" data-i18n="sec.eyebrow">Sécurité et confidentialité</span>
-          <h2 data-i18n="sec.title">Vos décisions et vos données restent à vous</h2>
+          <h2 data-i18n="sec.title">Vos décisions et vos données vous appartiennent</h2>
         </div>
         <ul class="principles">
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p1.t">Aucun ordre sans vous</strong><span data-i18n="p1.p">Le logiciel ne passera jamais un ordre sans votre confirmation explicite. Aucun trading automatique.</span></div></li>
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p2.t">Jamais votre mot de passe</strong><span data-i18n="p2.p">La connexion à un courtier se fait sur sa page officielle. DM TradeMaster Pro ne demande ni ne stocke votre mot de passe.</span></div></li>
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p3.t">Coffre Windows</strong><span data-i18n="p3.p">Les identifiants d’accès sont rangés dans le coffre de Windows, jamais en clair dans un fichier ni dans un journal.</span></div></li>
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p4.t">Serveur local protégé</strong><span data-i18n="p4.p">Le moteur du logiciel tourne sur votre ordinateur et n’accepte que les demandes de son interface.</span></div></li>
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p5.t">Conditions des sources respectées</strong><span data-i18n="p5.p">Quand une source interdit de conserver ses prix, le logiciel ne les enregistre nulle part et bloque leur export.</span></div></li>
-          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p6.t">Ni cookie ni traceur</strong><span data-i18n="p6.p">Ce site ne dépose aucun cookie, n’affiche aucune publicité et ne mesure pas l’audience.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p1.t">Aucun ordre sans vous</strong><span data-i18n="p1.p">Le logiciel ne passe jamais d’ordre sans votre confirmation explicite. Aucune exécution automatique.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p2.t">Vos mots de passe restent chez vous</strong><span data-i18n="p2.p">Aucun mot de passe de courtier ne quitte votre ordinateur. Lorsque c’est possible, la connexion se fait directement sur la page officielle du courtier.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p3.t">Coffre-fort de Windows</strong><span data-i18n="p3.p">Les identifiants d’accès sont protégés par le coffre-fort de Windows, jamais enregistrés en clair dans un fichier ni dans un journal.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p4.t">Moteur local protégé</strong><span data-i18n="p4.p">Le moteur du logiciel fonctionne sur votre ordinateur et n’accepte que les demandes de sa propre interface.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p5.t">Conditions des sources respectées</strong><span data-i18n="p5.p">Lorsqu’une source interdit la conservation de ses prix, le logiciel ne les enregistre nulle part et en bloque l’export.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p6.t">Ni cookie ni traceur</strong><span data-i18n="p6.p">Ce site ne dépose aucun cookie, n’affiche aucune publicité et ne mesure pas son audience.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p7.t">Site protégé contre le piratage</strong><span data-i18n="p7.p">Connexion chiffrée (HTTPS) imposée, pages statiques sans base de données ni espace d’administration exposé, et politique de sécurité du contenu qui bloque tout script extérieur.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p8.t">Aucune prise pour le spam</strong><span data-i18n="p8.p">Aucun formulaire ni aucune donnée collectée, et une adresse de contact protégée contre la collecte automatique par les robots&nbsp;: rien ne peut être détourné pour envoyer des messages indésirables.</span></div></li>
+          <li class="reveal"><svg><use href="#i-check"/></svg><div><strong data-i18n="p9.t">Méfiez-vous des imitations</strong><span data-i18n="p9.p">DM TradeMaster Pro ne vous demandera jamais votre mot de passe de courtier, un paiement ni l’accès à votre compte par message. Seul ce site présente officiellement le logiciel.</span></div></li>
         </ul>
+        <p class="note"><a href="confidentialite.html" data-i18n="sec.more">Lire la politique de confidentialité</a></p>
       </div>
     </section>
 
@@ -207,14 +235,15 @@
           <h2 data-i18n="faq.title">Questions fréquentes</h2>
         </div>
         <div class="faq">
-          <details class="reveal"><summary data-i18n="q1">Le logiciel est-il disponible </summary><p data-i18n="a1">Pas encore. DM TradeMaster Pro est en développement  aucune version n’est distribuée pour l’instant. Ce site sera mis à jour quand une première version sera prête.</p></details>
-          <details class="reveal"><summary data-i18n="q2">DM TradeMaster Pro fait-il gagner de l’argent </summary><p data-i18n="a2">Non, et aucun logiciel ne peut le promettre. C’est un outil d’analyse et d’organisation. Le trading comporte un risque élevé de perte en capital  vos décisions restent les vôtres.</p></details>
-          <details class="reveal"><summary data-i18n="q3">Le logiciel passe-t-il des ordres automatiquement </summary><p data-i18n="a3">Non. Les ordres arriveront dans une phase ultérieure, et chacun devra être confirmé par vous, explicitement.</p></details>
-          <details class="reveal"><summary data-i18n="q4">Avec quels courtiers fonctionnera-t-il </summary><p data-i18n="a4">Les connexions passent par les interfaces officielles des plateformes, en lecture seule d’abord. La liste sera publiée quand chaque connexion sera prête et vérifiée.</p></details>
-          <details class="reveal"><summary data-i18n="q5">Mes identifiants sont-ils en sécurité </summary><p data-i18n="a5">Vous vous connectez sur la page officielle de votre courtier  le logiciel ne voit pas votre mot de passe. Les accès qu’il reçoit sont rangés dans le coffre de Windows.</p></details>
-          <details class="reveal"><summary data-i18n="q6">Une version Android est-elle prévue </summary><p data-i18n="a6">Oui, après la version Windows, avec la synchronisation de vos analyses entre les deux.</p></details>
-          <details class="reveal"><summary data-i18n="q7">Combien coûtera le logiciel </summary><p data-i18n="a7">Aucun tarif n’est fixé pour l’instant.</p></details>
-          <details class="reveal"><summary data-i18n="q8">Qui développe DM TradeMaster Pro </summary><p data-i18n="a8">Abdel Nazir André KPEKPASSI, développeur indépendant au Bénin.</p></details>
+          <details class="reveal"><summary data-i18n="q1">Le logiciel est-il disponible&nbsp;?</summary><p data-i18n="a1">Pas encore. DM TradeMaster Pro est en cours de développement. La première version sera d’abord présentée à la communauté DM pour validation&nbsp;; ce site sera mis à jour à ce moment-là.</p></details>
+          <details class="reveal"><summary data-i18n="q9">Quelle place pour la communauté DM&nbsp;?</summary><p data-i18n="a9">Centrale. Le logiciel est conçu pour répondre à ses besoins. Après la validation de la première version, les retours des membres orienteront les améliorations et les nouvelles fonctionnalités.</p></details>
+          <details class="reveal"><summary data-i18n="q2">DM TradeMaster Pro garantit-il des gains&nbsp;?</summary><p data-i18n="a2">Non, et aucun logiciel ne peut le garantir. C’est un outil d’analyse et d’organisation. Le trading comporte un risque élevé de perte en capital&nbsp;; vos décisions restent les vôtres.</p></details>
+          <details class="reveal"><summary data-i18n="q3">Le logiciel passe-t-il des ordres automatiquement&nbsp;?</summary><p data-i18n="a3">Non. Les ordres arriveront dans une étape ultérieure, et chacun devra être confirmé explicitement par vous.</p></details>
+          <details class="reveal"><summary data-i18n="q4">Avec quels courtiers fonctionnera-t-il&nbsp;?</summary><p data-i18n="a4">Les connexions passent par les interfaces officielles des plateformes de trading, en lecture seule dans un premier temps. La liste sera publiée lorsque chaque connexion aura été vérifiée.</p></details>
+          <details class="reveal"><summary data-i18n="q5">Mes identifiants sont-ils en sécurité&nbsp;?</summary><p data-i18n="a5">Oui. Aucun mot de passe de courtier ne quitte votre ordinateur&nbsp;: les accès sont protégés par le coffre-fort de Windows, et ni le développeur ni aucun service en ligne n’y a accès.</p></details>
+          <details class="reveal"><summary data-i18n="q6">Une version Android est-elle prévue&nbsp;?</summary><p data-i18n="a6">Oui, après la version Windows, avec la synchronisation de vos analyses entre les deux.</p></details>
+          <details class="reveal"><summary data-i18n="q7">Combien coûtera le logiciel&nbsp;?</summary><p data-i18n="a7">Aucun tarif n’est fixé à ce jour.</p></details>
+          <details class="reveal"><summary data-i18n="q8">Qui développe DM TradeMaster Pro&nbsp;?</summary><p data-i18n="a8">DM TradeMaster Pro est conçu et développé au Bénin par Abdel Nazir André KPEKPASSI, pour la communauté DM.</p></details>
         </div>
       </div>
     </section>
@@ -223,14 +252,17 @@
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
-        <a class="brand" href="./"><img src="assets/img/dm-logo-80.png" width="40" height="40" alt=""><span>DM TradeMaster <b>Pro</b></span></a>
+        <div>
+          <a class="brand" href="./"><img src="assets/img/dm-logo-80.png" width="40" height="40" alt=""><span>DM TradeMaster <b>Pro</b></span></a>
+          <p class="footer-tag" data-i18n="foot.tag">Conçu pour la communauté DM.</p>
+        </div>
         <ul class="footer-links">
-          <li><a href="confidentialite.html" data-i18n="foot.privacy">Confidentialité</a></li>
+          <li><a href="confidentialite.html" data-i18n="foot.privacy">Politique de confidentialité</a></li>
           <li><a href="mentions-legales.html" data-i18n="foot.legal">Mentions légales</a></li>
           <li><a href="risques.html" data-i18n="foot.risk">Avertissement sur les risques</a></li>
         </ul>
       </div>
-      <p class="footer-risk" data-i18n="foot.riskText">Le trading de produits à effet de levier (forex, CFD, indices synthétiques, cryptomonnaies) comporte un risque élevé de perte en capital et ne convient pas à tout le monde. Les informations de ce site ne sont pas des conseils en investissement.</p>
+      <p class="footer-risk" data-i18n="foot.riskText">Le trading de produits à effet de levier (forex, CFD, indices synthétiques, cryptomonnaies) comporte un risque élevé de perte en capital et ne convient pas à tous les investisseurs. Les informations de ce site ne constituent pas des conseils en investissement.</p>
       <p class="footer-risk">© <span data-year>2026</span> Abdel Nazir André KPEKPASSI · <span data-i18n="foot.country">Bénin</span></p>
     </div>
   </footer>

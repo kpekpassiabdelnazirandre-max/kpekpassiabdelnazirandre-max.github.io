@@ -83,6 +83,14 @@
   var year = document.querySelector('[data-year]')
   if (year) year.textContent = String(new Date().getFullYear())
 
+  // Adresse de contact assemblée à l'affichage : elle n'apparaît jamais en clair dans le code de
+  // la page, ce qui la protège de la collecte automatique par les robots de spam.
+  document.querySelectorAll('a.mail[data-user][data-domain]').forEach(function (link) {
+    var address = link.getAttribute('data-user') + '@' + link.getAttribute('data-domain')
+    link.textContent = address
+    link.setAttribute('href', 'mailto:' + address)
+  })
+
   /* ------------------------------------------------------------------ graphique décoratif */
   var canvas = document.getElementById('hero-chart')
   if (!canvas) return
