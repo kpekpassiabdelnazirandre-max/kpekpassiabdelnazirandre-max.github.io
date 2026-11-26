@@ -1,3 +1,2 @@
 User-agent: *
 Allow: /
-Sitemap: https://kpekpassiabdelnazirandre-max.github.io/sitemap.xml
